@@ -13,7 +13,7 @@ Inside Front-end VM there is one docker container,container is running simple Py
 
 Inside Back-end VM same as above there is one docker container,container is running Python (nameko) micro service that uses python utility module "psutil" to get all system related info ( about container == machine ) it's running in .
 
-### This is how end project looks like 
+### Schematic view of project  
 ![alt text](https://github.com/ishswar/devOps_w7/blob/master/Vagrant-DevOps_Docker.png)
 
 
