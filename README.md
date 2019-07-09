@@ -2,22 +2,22 @@
 
 ## Introduction 
 
-In this project we use to VMs running docker container init .
-First VM is called front end and second one is called back end 
+In this project we use two VMs running docker container inside the VMs .
+First VM is called Front-end and second one is called Back-end 
 
 ### Front-end 
 
-Inside Front-end VM there is one docker container is running ,container is running simple Python (nameko) based micro service it's job is to route incoming HTTP Request to backend over port 80.
+Inside Front-end VM there is one docker container,container is running simple Python (nameko) based micro service it's job is to route incoming HTTP Request to back-end over port 80.
 
 ### Back-end 
 
-Inside Back-end VM same as above there is one docker container is running , container is running Python (nameko) micro service that uses python utility module "psutil" to get all system related info ( about container == machine ) it's running in .
+Inside Back-end VM same as above there is one docker container,container is running Python (nameko) micro service that uses python utility module "psutil" to get all system related info ( about container == machine ) it's running in .
 
 ### This is how end project looks like 
 ![alt text](https://github.com/ishswar/devOps_w7/blob/master/Vagrant-DevOps_Docker.png)
 
 
-### Output 
+### Output of calling Front-end via Curl tool - to get CPU Time , Swap Memroy , Virtual Memroy & IP Address 
 ``` BASH
 
 ➜  frontend curl http://localhost:4567/grab/cpu_times/
