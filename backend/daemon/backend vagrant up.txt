@@ -1,0 +1,230 @@
+➜  backend vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/xenial64' version '20190501.0.0' is up to date...
+==> default: A newer version of the box 'ubuntu/xenial64' for provider 'virtualbox' is
+==> default: available! You currently have version '20190501.0.0'. The latest is version
+==> default: '20190708.0.0'. Run `vagrant box update` to update.
+==> default: Resuming suspended VM...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2201
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+==> default: Machine booted and ready!
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+➜  backend vagrant provision
+==> default: Running provisioner: install_curl (shell)...
+    default: Running: inline script
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: 
+    default: Reading state information...
+    default: curl is already the newest version (7.47.0-1ubuntu2.13).
+    default: 0 upgraded, 0 newly installed, 0 to remove and 52 not upgraded.
+==> default: Running provisioner: install_docker (shell)...
+    default: Running: inline script
+    default: Hit:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+    default: Get:2 https://download.docker.com/linux/ubuntu xenial InRelease [66.2 kB]
+    default: Get:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+    default: Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+    default: Get:5 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages [9,015 B]
+    default: Get:6 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+    default: Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [988 kB]
+    default: Get:8 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [698 kB]
+    default: Get:9 http://archive.ubuntu.com/ubuntu xenial-updates/main Translation-en [390 kB]
+    default: Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [754 kB]
+    default: Get:11 http://security.ubuntu.com/ubuntu xenial-security/main Translation-en [278 kB]
+    default: Get:12 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [446 kB]
+    default: Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [315 kB]
+    default: Get:14 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [181 kB]
+    default: Fetched 4,451 kB in 4s (992 kB/s)
+    default: Reading package lists...
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: 
+    default: Reading state information...
+    default: apt-transport-https is already the newest version (1.2.32).
+    default: ca-certificates is already the newest version (20170717~16.04.2).
+    default: curl is already the newest version (7.47.0-1ubuntu2.13).
+    default: software-properties-common is already the newest version (0.96.20.8).
+    default: 0 upgraded, 0 newly installed, 0 to remove and 70 not upgraded.
+    default: OK
+    default: Hit:1 https://download.docker.com/linux/ubuntu xenial InRelease
+    default: Hit:2 http://archive.ubuntu.com/ubuntu xenial InRelease
+    default: Hit:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease
+    default: Hit:4 http://security.ubuntu.com/ubuntu xenial-security InRelease
+    default: Hit:5 http://archive.ubuntu.com/ubuntu xenial-backports InRelease
+    default: Reading package lists...
+    default: docker-ce:
+    default:   Installed: 5:18.09.6~3-0~ubuntu-xenial
+    default:   Candidate: 5:18.09.7~3-0~ubuntu-xenial
+    default:   Version table:
+    default:      5:18.09.7~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:  *** 5:18.09.6~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:         100 /var/lib/dpkg/status
+    default:      5:18.09.5~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      5:18.09.4~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      5:18.09.3~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      5:18.09.2~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      5:18.09.1~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      5:18.09.0~3-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      18.06.3~ce~3-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      18.06.2~ce~3-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      18.06.1~ce~3-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      18.06.0~ce~3-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      18.03.1~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      18.03.0~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.12.1~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.12.0~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.09.1~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.09.0~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.06.2~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.06.1~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.06.0~ce-0~ubuntu 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.03.3~ce-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.03.2~ce-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.03.1~ce-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default:      17.03.0~ce-0~ubuntu-xenial 500
+    default:         500 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: Reading state information...
+    default: The following packages will be upgraded:
+    default:   docker-ce
+    default: 1 upgraded, 0 newly installed, 0 to remove and 69 not upgraded.
+    default: Need to get 17.4 MB of archives.
+    default: After this operation, 33.8 kB of additional disk space will be used.
+    default: Get:1 https://download.docker.com/linux/ubuntu xenial/stable amd64 docker-ce amd64 5:18.09.7~3-0~ubuntu-xenial [17.4 MB]
+    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    default: Fetched 17.4 MB in 1s (10.0 MB/s)
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 58491 files and directories currently installed.)
+    default: Preparing to unpack .../docker-ce_5%3a18.09.7~3-0~ubuntu-xenial_amd64.deb ...
+    default: Unpacking docker-ce (5:18.09.7~3-0~ubuntu-xenial) over (5:18.09.6~3-0~ubuntu-xenial) ...
+    default: Processing triggers for ureadahead (0.100.0-19.1) ...
+    default: Processing triggers for systemd (229-4ubuntu21.21) ...
+    default: Setting up docker-ce (5:18.09.7~3-0~ubuntu-xenial) ...
+    default: update-alternatives: 
+    default: using /usr/bin/dockerd-ce to provide /usr/bin/dockerd (dockerd) in auto mode
+    default: ● docker.service - Docker Application Container Engine
+    default:    Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+    default:    Active: active (running) since Mon 2019-07-08 23:31:18 UTC; 824ms ago
+    default:      Docs: https://docs.docker.com
+    default:  Main PID: 23183 (dockerd)
+    default:     Tasks: 10
+    default:    Memory: 241.4M
+    default:       CPU: 164ms
+    default:    CGroup: /system.slice/docker.service
+    default:            └─23183 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+    default: 
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.539252614Z" level=warning msg="Your kernel does not support swap memory limit"
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.539279883Z" level=warning msg="Your kernel does not support cgroup rt period"
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.539286048Z" level=warning msg="Your kernel does not support cgroup rt runtime"
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.539631655Z" level=info msg="Loading containers: start."
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.614854071Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.638295822Z" level=info msg="Loading containers: done."
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.663457569Z" level=info msg="Docker daemon" commit=2d0083d graphdriver(s)=overlay2 version=18.09.7
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.664040960Z" level=info msg="Daemon has completed initialization"
+    default: Jul 08 23:31:18 ubuntu-xenial dockerd[23183]: time="2019-07-08T23:31:18.669686818Z" level=info msg="API listen on /var/run/docker.sock"
+    default: Jul 08 23:31:18 ubuntu-xenial systemd[1]: Started Docker Application Container Engine.
+    default: 
+    default: Hello from Docker!
+    default: This message shows that your installation appears to be working correctly.
+    default: 
+    default: To generate this message, Docker took the following steps:
+    default:  1. The Docker client contacted the Docker daemon.
+    default:  2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    default:     (amd64)
+    default:  3. The Docker daemon created a new container from that image which runs the
+    default:     executable that produces the output you are currently reading.
+    default:  4. The Docker daemon streamed that output to the Docker client, which sent it
+    default:     to your terminal.
+    default: 
+    default: To try something more ambitious, you can run an Ubuntu container with:
+    default:  $ docker run -it ubuntu bash
+    default: 
+    default: Share images, automate workflows, and more with a free Docker ID:
+    default:  https://hub.docker.com/
+    default: 
+    default: For more examples and ideas, visit:
+    default:  https://docs.docker.com/get-started/
+    default: groupadd: group 'docker' already exists
+==> default: Running provisioner: install_backend (shell)...
+    default: Running: inline script
+    default: daemon deploy_docker_backend.bash install_docker.bash ubuntu-xenial-16.04-cloudimg-console.log Vagrantfile Stop webserver
+    default: daemon deploy_docker_backend.bash install_docker.bash ubuntu-xenial-16.04-cloudimg-console.log Vagrantfile Remove webserver image
+    default: daemon deploy_docker_backend.bash install_docker.bash ubuntu-xenial-16.04-cloudimg-console.log Vagrantfile Build nameko service
+    default: Sending build context to Docker daemon   5.12kB
+    default: Step 1/5 : FROM python:3
+    default:  ---> 34a518642c76
+    default: Step 2/5 : WORKDIR /app
+    default:  ---> Using cache
+    default:  ---> 243147c06cc3
+    default: Step 3/5 : ADD . /app
+    default:  ---> Using cache
+    default:  ---> fd4f1a1b6e26
+    default: Step 4/5 : RUN pip install -r requirements.txt
+    default:  ---> Using cache
+    default:  ---> bf22656d6a3b
+    default: Step 5/5 : CMD nameko run daemon
+    default:  ---> Using cache
+    default:  ---> ed654f6a74e9
+    default: Successfully built ed654f6a74e9
+    default: Successfully tagged daemon:latest
+    default: daemon.py Dockerfile requirements.txt Run backend service
+    default: 464841b65b9badf48069ed99e30e27d928354da2e894fbb6ca5fb0337da227fc
+➜  backend vagrant port
+The forwarded ports for the machine are listed below. Please note that
+these values may differ from values configured in the Vagrantfile if the
+provider supports automatic port collision detection and resolution.
+
+    22 (guest) => 2201 (host)
+    80 (guest) => 4568 (host)
+➜  backend curl http://localhost:4568/cpu_times
+scputimes(user=100.54, nice=5.78, system=60.76, idle=37392.28, iowait=10.69, irq=0.0, softirq=8.8, steal=0.0, guest=0.0, guest_nice=0.0)
